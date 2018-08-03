@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Registros procesados: {{ registrosProcesados }}</h2>
+            <h2>Errores: {{ registrosErroneos }}</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>isin</th>
+                <th>fecha</th>
+                <th>precio</th>
+            </tr>
+            </thead>
+            {{#each registroFallo}}
+                <tbody>
+                <tr>
+                    <td>{{ isin }}</td>
+                    <td>{{ fecha }}</td>
+                    <td>{{ precio }}</td>
+                </tr>
+                </tbody>
+            {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
